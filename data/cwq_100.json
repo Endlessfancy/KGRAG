@@ -1,0 +1,1738 @@
+[
+  {
+    "ID": "WebQTest-983_ccda690fb745939d0a62c3fbcf3e3769",
+    "compositionality_type": "conjunction",
+    "created": "2018-02-13T04:29:58",
+    "machine_question": "where did tennessee williams go to college and the educational institution newspaper is The Maneater",
+    "question": "Where did Tennessee Williams go to college where the newspaper is \"The Maneater\"?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0c4y8)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0c4y8 ns:people.person.education ?y .\n?y ns:education.education.institution ?x .\n?x ns:common.topic.notable_types ns:m.01y2hnl .\n?x ns:education.educational_institution.newspaper ns:m.04pk3f . \n}",
+    "webqsp_ID": "WebQTest-983",
+    "webqsp_question": "where did tennessee williams go to college",
+    "topic_entity": {
+      "m.0c4y8": "Tennessee Williams",
+      "m.04pk3f": "The Maneater"
+    },
+    "answer": "University of Missouri",
+    "qid_topic_entity": {
+      "Q134262": "Tennessee Williams",
+      "Q7750176": "The Maneater"
+    }
+  },
+  {
+    "ID": "WebQTest-1560_1bee868ed5551a3cfdba70a720adbc04",
+    "compositionality_type": "comparative",
+    "created": "2018-02-13T05:34:06",
+    "machine_question": "who founded new york university and held his govermental position from after 1795-03-04",
+    "question": "Who founded New York University, which held his governmental position from after 1795-03-04?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0bwfn)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0bwfn ns:organization.organization.founders ?x .\n?x ns:government.politician.government_positions_held ?c .\n?c ns:government.government_position_held.from ?num .\nFILTER (?num > \"1795-03-04\"^^xsd:dateTime) . \n}",
+    "webqsp_ID": "WebQTest-1560",
+    "webqsp_question": "who founded new york university",
+    "topic_entity": {
+      "m.0bwfn": "New York University"
+    },
+    "answer": "Albert Gallatin",
+    "qid_topic_entity": {
+      "Q49210": "New York University"
+    }
+  },
+  {
+    "ID": "WebQTest-590_2f40ab1d4ea497555c4c883c92a758b7",
+    "compositionality_type": "composition",
+    "created": "2018-02-13T03:49:14",
+    "machine_question": "who is in charge of the country that has the national anthem Allahu Akbar now",
+    "question": "Who is the leader of the country that has national anthem Allhu Akbar?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:location.country.national_anthem ?k .\n?k ns:government.national_anthem_of_a_country.anthem ns:m.036y70 . \n?c ns:government.governmental_jurisdiction.governing_officials ?y .\n?y ns:government.government_position_held.office_holder ?x .\n?y ns:government.government_position_held.office_position_or_title ns:m.0j5wjnc .\nFILTER(NOT EXISTS {?y ns:government.government_position_held.from ?sk0} || \nEXISTS {?y ns:government.government_position_held.from ?sk1 . \nFILTER(xsd:datetime(?sk1) <= \"2015-08-10\"^^xsd:dateTime) })\nFILTER(NOT EXISTS {?y ns:government.government_position_held.to ?sk2} || \nEXISTS {?y ns:government.government_position_held.to ?sk3 . \nFILTER(xsd:datetime(?sk3) >= \"2015-08-10\"^^xsd:dateTime) })\n}\n",
+    "webqsp_ID": "WebQTest-590",
+    "webqsp_question": "who is in charge of libya now",
+    "topic_entity": {
+      "m.036y70": "Allahu Akbar",
+      "m.0j5wjnc": "Prime Minister of Libya"
+    },
+    "answer": "Abdullah al-Thani",
+    "qid_topic_entity": {
+      "Q970573": "Allahu Akbar"
+    }
+  },
+  {
+    "ID": "WebQTest-1012_7ee41dcd5e0ee726e65a46d891982c8f",
+    "compositionality_type": "conjunction",
+    "created": "2018-02-13T04:31:18",
+    "machine_question": "what to do in hollywood ca this weekend and is the tv show American Gladiators was filmed there",
+    "question": "What Hollywood studio produced the American Gladiators TV movie?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0f2wj)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0f2wj ns:travel.travel_destination.tourist_attractions ?x .\n?x ns:tv.tv_location.tv_shows_filmed_here ns:m.02rltk . \n}",
+    "webqsp_ID": "WebQTest-1012",
+    "webqsp_question": "what to do in hollywood ca this weekend",
+    "topic_entity": {
+      "m.0f2wj": "Hollywood",
+      "m.02rltk": "American Gladiators"
+    },
+    "answer": "Universal Studios Hollywood",
+    "qid_topic_entity": {
+      "Q34006": "Hollywood",
+      "Q464710": "American Gladiators"
+    }
+  },
+  {
+    "ID": "WebQTrn-1812_25c9be422f1472e5cdf7358613ad93cf",
+    "compositionality_type": "conjunction",
+    "created": "2018-02-12T22:53:34",
+    "machine_question": "what countries are in the caribbean and is the country that contains Saint Michael Parish",
+    "question": "What country in the Caribbean contains Saint Michael Parish?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0261m)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0261m ns:location.location.contains ?x .\n?x ns:common.topic.notable_types ns:m.01mp .\n?x ns:location.country.administrative_divisions ns:m.02p5kp . \n}",
+    "webqsp_ID": "WebQTrn-1812",
+    "webqsp_question": "what countries are in the caribbean",
+    "topic_entity": {
+      "m.0261m": "Caribbean",
+      "m.02p5kp": "Saint Michael Parish"
+    },
+    "answer": "Barbados",
+    "qid_topic_entity": {
+      "Q664609": "Caribbean",
+      "Q819170": "Saint Michael Parish"
+    }
+  },
+  {
+    "ID": "WebQTrn-60_ab97cd852bcb8f41194f686282460b40",
+    "compositionality_type": "conjunction",
+    "created": "2018-02-12T19:43:48",
+    "machine_question": "what countries do people speak portuguese and is the minimum wage was 356.72",
+    "question": "What Portuguese-speaking country's minimum wage was 356.72?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.05zjd)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.05zjd ns:language.human_language.countries_spoken_in ?x .\n?x ns:location.statistical_region.minimum_wage ?c .\n?c ns:measurement_unit.recurring_money_value.amount \"356.72\" . \n}",
+    "webqsp_ID": "WebQTrn-60",
+    "webqsp_question": "what countries do people speak portuguese",
+    "topic_entity": {
+      "m.05zjd": "Portuguese Language"
+    },
+    "answer": "Portugal",
+    "qid_topic_entity": {
+      "Q5146": "Portuguese Language"
+    }
+  },
+  {
+    "ID": "WebQTest-1384_cb60fbc3dea230fc32682cbb8556ba62",
+    "compositionality_type": "composition",
+    "created": "2018-02-13T05:14:50",
+    "machine_question": "what is the predominant religion in the location that appointed Benjamin Netanyahu to govermental position",
+    "question": "What is the most predominant religion in the country Benjamin Netanyahu holds a governmental position?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:government.governmental_jurisdiction.governing_officials ?k .\n?k ns:government.government_position_held.appointed_by ns:m.0fm2h . \n?c ns:location.statistical_region.religions ?y .\n?y ns:location.religion_percentage.religion ?x .\n?y ns:location.religion_percentage.percentage ?sk0 .\n}\nORDER BY DESC(xsd:float(?sk0))\nLIMIT 1\n",
+    "webqsp_ID": "WebQTest-1384",
+    "webqsp_question": "what is the predominant religion in israel",
+    "topic_entity": {
+      "m.0fm2h": "Benjamin Netanyahu"
+    },
+    "answer": "Judaism",
+    "qid_topic_entity": {
+      "Q43723": "Benjamin Netanyahu"
+    }
+  },
+  {
+    "ID": "WebQTrn-237_f44adc4947a59c150317bb5923cf1c9b",
+    "compositionality_type": "composition",
+    "created": "2018-02-12T20:05:24",
+    "machine_question": "what is the name of the the sports team with the fight song Steelers Polka head coach",
+    "question": "Who is the current head coach of the team the uses the song title \"Fight Polka\"?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:sports.sports_team.fight_song ns:m.0j_8yp9 . \n?c ns:american_football.football_team.current_head_coach ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-237",
+    "webqsp_question": "what is the name of the pittsburgh steelers head coach",
+    "topic_entity": {
+      "m.0j_8yp9": "Steelers Polka"
+    },
+    "answer": "Mike Tomlin",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-241_0652d8b1cb95848c9630860c92e38e6f",
+    "compositionality_type": "conjunction",
+    "created": "2018-02-12T20:06:06",
+    "machine_question": "what countries share borders with france and the location time zone is Western European Time Zone",
+    "question": "What country bordering France that is in the Western European Time Zone?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0f8l9c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0f8l9c ns:location.location.adjoin_s ?y .\n?y ns:location.adjoining_relationship.adjoins ?x .\n?x ns:common.topic.notable_types ns:m.01mp .\n?x ns:location.location.time_zones ns:m.02q_y6 . \n}",
+    "webqsp_ID": "WebQTrn-241",
+    "webqsp_question": "what countries share borders with france",
+    "topic_entity": {
+      "m.0f8l9c": "France",
+      "m.02q_y6": "Western European Time Zone"
+    },
+    "answer": "Spain",
+    "qid_topic_entity": {
+      "Q142": "France",
+      "Q843589": "Western European Time Zone"
+    }
+  },
+  {
+    "ID": "WebQTest-1603_66cf01fb3373deb3f112935fbc2518da",
+    "compositionality_type": "composition",
+    "created": "2018-02-13T05:38:56",
+    "machine_question": "what is the sacred text of the religion notable figure is Zhang Jue",
+    "question": "What text in the religion which includeZhang Jue as a key figure is considered to be sacred?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:religion.religion.notable_figures ns:m.02gjv7 . \n?c ns:religion.religion.texts ?x .\n}\n",
+    "webqsp_ID": "WebQTest-1603",
+    "webqsp_question": "what is the sacred text of daoism",
+    "topic_entity": {
+      "m.02gjv7": "Zhang Jue"
+    },
+    "answer": "Zhuang Zhou",
+    "qid_topic_entity": {
+      "Q197202": "Zhang Jue"
+    }
+  },
+  {
+    "ID": "WebQTest-1785_0943c2e85ef4350a9672b44cf93291d4",
+    "compositionality_type": "conjunction",
+    "created": "2018-02-13T05:59:52",
+    "machine_question": "what was kim richards in and is the film has a charcter named Idi Amin",
+    "question": "Which film with Idi Amin as a character did Kim Richards appear in?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.08l257)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.08l257 ns:film.actor.film ?y .\n?y ns:film.performance.film ?x .\n?x ns:film.film.starring ?c .\n?c ns:film.performance.character ns:m.02nwpmt . \n}",
+    "webqsp_ID": "WebQTest-1785",
+    "webqsp_question": "what was kim richards in",
+    "topic_entity": {
+      "m.08l257": "Kim Richards",
+      "m.02nwpmt": "Idi Amin"
+    },
+    "answer": "Raid on Entebbe",
+    "qid_topic_entity": {
+      "Q587156": "Kim Richards"
+    }
+  },
+  {
+    "ID": "WebQTrn-2023_a1424289baa01b0b74d44cdffa8ef18f",
+    "compositionality_type": "composition",
+    "created": "2018-02-12T23:16:59",
+    "machine_question": "where the person education institution is Eli Whitney High School was raised",
+    "question": "What is the location where the individual who attended Eli Whitney High School brought up?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:people.person.education ?k .\n?k ns:education.education.institution ns:m.04fk_nt . \n?c ns:people.person.place_of_birth ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-2023",
+    "webqsp_question": "where jay z was raised",
+    "topic_entity": {
+      "m.04fk_nt": "Eli Whitney High School"
+    },
+    "answer": "Brooklyn",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-2209_6bddb2cfae99a6fca8b5bb40631d71eb",
+    "compositionality_type": "composition",
+    "created": "2018-02-12T23:35:04",
+    "machine_question": "when did the the sports team owner is Wyc Grousbeck win championship",
+    "question": "Team owner Wyc Grousbeck last won the Championship when?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:sports.professional_sports_team.owner_s ns:m.0b7hk2 . \n?c ns:sports.sports_team.championships ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-2209",
+    "webqsp_question": "when did the celtics win championship",
+    "topic_entity": {
+      "m.0b7hk2": "Wyc Grousbeck"
+    },
+    "answer": "1964 NBA Finals",
+    "qid_topic_entity": {
+      "Q2297571": "Wyc Grousbeck"
+    }
+  },
+  {
+    "ID": "WebQTest-1348_c1da6561b1fb496c7b1eae3b08eafca8",
+    "compositionality_type": "conjunction",
+    "created": "2018-02-13T05:09:31",
+    "machine_question": "what team did peyton manning 's dad play for and is the team won the 2010 NFC Championship Game championship",
+    "question": "What NFL Team did Peyton Manning 's father play for also won the 2010 NFC Championship Game?",
+    "sparql": "#MANUAL SPARQL\nPREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nns:m.027jv8 ns:people.person.parents ?y .\n?y ns:people.person.gender ns:m.05zppz . #Male\n?y ns:sports.pro_athlete.teams ?z .\n?z ns:sports.sports_team_roster.team ?x .?x ns:sports.sports_team.championships ns:m.0_gv207 . \n}",
+    "webqsp_ID": "WebQTest-1348",
+    "webqsp_question": "what team did peyton manning 's dad play for",
+    "topic_entity": {
+      "m.027jv8": "Peyton Manning",
+      "m.05zppz": "Male",
+      "m.0_gv207": "2010 NFC Championship Game"
+    },
+    "answer": "New Orleans Saints",
+    "qid_topic_entity": {
+      "Q7539": "Peyton Manning",
+      "Q44148": "Male"
+    }
+  },
+  {
+    "ID": "WebQTrn-1770_76c2e83b07b9da336705f1d623faf5a4",
+    "compositionality_type": "composition",
+    "created": "2018-02-12T22:48:28",
+    "machine_question": "what is the artist had a concert tour named The Mrs. Carter Show World Tour 's daughters name",
+    "question": "What is the name of the daughter of the artist who had the \"The Mrs. Carter Show World Tour\"?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:music.artist.concert_tours ns:m.0qftnyr . \n?c ns:people.person.children ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-1770",
+    "webqsp_question": "what is beyonce 's daughters name",
+    "topic_entity": {
+      "m.0qftnyr": "The Mrs. Carter Show World Tour"
+    },
+    "answer": "Blue Ivy",
+    "qid_topic_entity": {
+      "Q4168219": "The Mrs. Carter Show World Tour"
+    }
+  },
+  {
+    "ID": "WebQTrn-95_bc814d72f169b435afd21e2317dc1a4d",
+    "compositionality_type": "composition",
+    "created": "2018-02-12T19:46:17",
+    "machine_question": "what kind of money should i take to the country that has the national anthem Jamaica, Land We Love",
+    "question": "What currency is used in the country that has national anthem Jamaica, Land we Love?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:location.country.national_anthem ?k .\n?k ns:government.national_anthem_of_a_country.anthem ns:m.01f58t . \n?c ns:location.country.currency_used ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-95",
+    "webqsp_question": "what kind of money should i take to jamaica",
+    "topic_entity": {
+      "m.01f58t": "Jamaica, Land We Love"
+    },
+    "answer": "Jamaican dollar",
+    "qid_topic_entity": {
+      "Q204643": "Jamaica, Land We Love"
+    }
+  },
+  {
+    "ID": "WebQTrn-60_ea64bd8530c79e21438a71faed039caf",
+    "compositionality_type": "conjunction",
+    "created": "2018-02-12T19:43:48",
+    "machine_question": "what countries do people speak portuguese and is the country that has the national anthem Die Stem van Suid-Afrika",
+    "question": "In what country is the national anthem Die Stem van Suid-Afrika and people speak Portuguese?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.05zjd)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.05zjd ns:language.human_language.countries_spoken_in ?x .\n?x ns:location.country.national_anthem ?c .\n?c ns:government.national_anthem_of_a_country.anthem ns:m.01_w8_ . \n}",
+    "webqsp_ID": "WebQTrn-60",
+    "webqsp_question": "what countries do people speak portuguese",
+    "topic_entity": {
+      "m.05zjd": "Portuguese Language",
+      "m.01_w8_": "Die Stem van Suid-Afrika"
+    },
+    "answer": "South Africa",
+    "qid_topic_entity": {
+      "Q5146": "Portuguese Language",
+      "Q537157": "Die Stem van Suid-Afrika"
+    }
+  },
+  {
+    "ID": "WebQTrn-60_04672e8a84854be8fd9ff7409d98e546",
+    "compositionality_type": "conjunction",
+    "created": "2018-02-12T19:43:48",
+    "machine_question": "what countries do people speak portuguese and is the energy use per capita in KGOE was once 1006.494",
+    "question": "In what country with  had an energy use per capital in KGOE of 1006.494 do people speak Portuguese?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.05zjd)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.05zjd ns:language.human_language.countries_spoken_in ?x .\n?x ns:location.statistical_region.energy_use_per_capita ?c .\n?c ns:measurement_unit.dated_kgoe.number \"1006.494\" . \n}",
+    "webqsp_ID": "WebQTrn-60",
+    "webqsp_question": "what countries do people speak portuguese",
+    "topic_entity": {
+      "m.05zjd": "Portuguese Language"
+    },
+    "answer": "Portugal",
+    "qid_topic_entity": {
+      "Q5146": "Portuguese Language"
+    }
+  },
+  {
+    "ID": "WebQTrn-241_fa7fb367370bdcda12f06680e8b21b92",
+    "compositionality_type": "conjunction",
+    "created": "2018-02-12T20:06:06",
+    "machine_question": "what countries share borders with france and is the country that contains East Flanders",
+    "question": "What country borders France and contains East Flanders?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0f8l9c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0f8l9c ns:location.location.adjoin_s ?y .\n?y ns:location.adjoining_relationship.adjoins ?x .\n?x ns:common.topic.notable_types ns:m.01mp .\n?x ns:location.country.administrative_divisions ns:m.013v_g . \n}",
+    "webqsp_ID": "WebQTrn-241",
+    "webqsp_question": "what countries share borders with france",
+    "topic_entity": {
+      "m.0f8l9c": "France",
+      "m.013v_g": "East Flanders"
+    },
+    "answer": "Belgium",
+    "qid_topic_entity": {
+      "Q142": "France",
+      "Q1114": "East Flanders"
+    }
+  },
+  {
+    "ID": "WebQTest-1513_020f93c678f201a55199a0c40d829467",
+    "compositionality_type": "conjunction",
+    "created": "2018-02-13T05:30:11",
+    "machine_question": "what to do downtown sacramento and the location time zone is Pacific Time Zone",
+    "question": "What Pacific Time Zone location is in downtown Sacramento?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.07bcn)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.07bcn ns:travel.travel_destination.tourist_attractions ?x .\n?x ns:location.location.time_zones ns:m.02lcqs . \n}",
+    "webqsp_ID": "WebQTest-1513",
+    "webqsp_question": "what to do downtown sacramento",
+    "topic_entity": {
+      "m.07bcn": "Sacramento",
+      "m.02lcqs": "Pacific Time Zone"
+    },
+    "answer": "Folsom Lake",
+    "qid_topic_entity": {
+      "Q18013": "Sacramento",
+      "Q847142": "Pacific Time Zone"
+    }
+  },
+  {
+    "ID": "WebQTrn-567_98d888d83a1b23a19245b02c10839f3f",
+    "compositionality_type": "conjunction",
+    "created": "2018-02-12T20:44:09",
+    "machine_question": "what movies did ron howard do and is the film has a charcter named Charlie Brown",
+    "question": "What film with a character named Charlie Brown did Ron Howard do?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0g2lq)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0g2lq ns:film.actor.film ?y .\n?y ns:film.performance.film ?x .\n?x ns:film.film.starring ?c .\n?c ns:film.performance.character ns:m.011j44 . \n}",
+    "webqsp_ID": "WebQTrn-567",
+    "webqsp_question": "what movies did ron howard do",
+    "topic_entity": {
+      "m.0g2lq": "Ron Howard",
+      "m.011j44": "Charlie Brown"
+    },
+    "answer": "Under the Boardwalk: The Monopoly Story",
+    "qid_topic_entity": {
+      "Q103646": "Ron Howard",
+      "Q1168491": "Charlie Brown"
+    }
+  },
+  {
+    "ID": "WebQTrn-423_ce9f01df27adbfc73deaa6a14e5aa69c",
+    "compositionality_type": "comparative",
+    "created": "2017-10-25T22:09:36",
+    "machine_question": "what to do in laughlin nevada and is the structure opened after 1966",
+    "question": "What two structures opened after 1966 in Laughlin, Nevada?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.020bkmh)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.020bkmh ns:location.location.contains ?x .\n?x ns:architecture.structure.opened ?num .\nFILTER (?num > \"1966\"^^xsd:dateTime) . \n}",
+    "webqsp_ID": "WebQTrn-423",
+    "webqsp_question": "what to do in laughlin nevada",
+    "topic_entity": {
+      "m.020bkmh": "Laughlin"
+    },
+    "answer": "Edgewater Hotel and Casino",
+    "qid_topic_entity": {
+      "Q594154": "Laughlin"
+    }
+  },
+  {
+    "ID": "WebQTrn-2069_14d783de97238bd1ef6eb28fe7221306",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T02:15:08",
+    "machine_question": "what language chile speak and that its main speaking country is Peru",
+    "question": "Which language is spoken in Chile, its main speaking country is Peru?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.01p1v)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.01p1v ns:location.country.languages_spoken ?x .\n?x ns:language.human_language.main_country ns:m.016wzw . \n}",
+    "webqsp_ID": "WebQTrn-2069",
+    "webqsp_question": "what language chile speak",
+    "topic_entity": {
+      "m.01p1v": "Chile",
+      "m.016wzw": "Peru"
+    },
+    "answer": "Puquina Language",
+    "qid_topic_entity": {
+      "Q298": "Chile",
+      "Q419": "Peru"
+    }
+  },
+  {
+    "ID": "WebQTrn-849_29d62c66b3b2bc4938023788455b5bc7",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-25T23:14:05",
+    "machine_question": "which countries do germany border and produce the beer Grolsch",
+    "question": "What country that produces Grolsch beer borders Germany?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0345h)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0345h ns:location.location.adjoin_s ?y .\n?y ns:location.adjoining_relationship.adjoins ?x .\n?x ns:common.topic.notable_types ns:m.01mp .\n?x ns:food.beer_country_region.beers_from_here ns:m.02nvpkg . \n}",
+    "webqsp_ID": "WebQTrn-849",
+    "webqsp_question": "which countries do germany border",
+    "topic_entity": {
+      "m.0345h": "Germany",
+      "m.02nvpkg": "Grolsch"
+    },
+    "answer": "Netherlands",
+    "qid_topic_entity": {
+      "Q183": "Germany"
+    }
+  },
+  {
+    "ID": "WebQTrn-2859_aa42f50ae2e11ff4be5d8dbb6c65e099",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T04:14:39",
+    "machine_question": "who is the person that said \"Mysteries are due to secrecy.\" and what did he do",
+    "question": "What was the profession of the person who said \"Mysteries are due to secrecy.\"?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:people.person.quotations ns:m.048c4m_ . \n?c ns:people.person.profession ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-2859",
+    "webqsp_question": "who is francis bacon and what did he do",
+    "topic_entity": {
+      "m.048c4m_": "Mysteries are due to secrecy."
+    },
+    "answer": "Scientist",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-1722_d50834f94faf4fc329933bfc896be576",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T01:26:00",
+    "machine_question": "what continent does the the location where the film \"Speed 2: Cruise Control\" takes place belong to",
+    "question": "On which continent, is the location where the movie, \"Speed 2: Cruise Control\" , occur?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:film.film_location.featured_in_films ns:m.0419kt . \n?c ns:base.locations.countries.continent ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-1722",
+    "webqsp_question": "what continent does the bahamas belong to",
+    "topic_entity": {
+      "m.0419kt": "Speed 2: Cruise Control"
+    },
+    "answer": "North America",
+    "qid_topic_entity": {
+      "Q831800": "Speed 2: Cruise Control"
+    }
+  },
+  {
+    "ID": "WebQTrn-25_6ae300867eca734b6401db400f5a04a4",
+    "compositionality_type": "superlative",
+    "created": "2017-10-25T21:06:07",
+    "machine_question": "what movies does taylor lautner play in and is the film that was  released earliest",
+    "question": "Which film is the earliest that Taylor Lautner played in?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.07ldhs)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.07ldhs ns:film.actor.film ?y .\n?y ns:film.performance.film ?x .\n?x ns:film.film.release_date_s ?c .\n?c ns:film.film_regional_release_date.release_date ?num .\n}\nORDER BY ?num LIMIT 1",
+    "webqsp_ID": "WebQTrn-25",
+    "webqsp_question": "what movies does taylor lautner play in",
+    "topic_entity": {
+      "m.07ldhs": "Taylor Lautner"
+    },
+    "answer": "Shadow Fury",
+    "qid_topic_entity": {
+      "Q23359": "Taylor Lautner"
+    }
+  },
+  {
+    "ID": "WebQTrn-2023_835a8ec1be91ea0beafe52046c426bd3",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T02:07:58",
+    "machine_question": "where the composer of Can I Live II was raised",
+    "question": "Where did the composer of Can I Live II grow up?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:music.composer.compositions ns:m.0zxv5hk . \n?c ns:people.person.place_of_birth ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-2023",
+    "webqsp_question": "where jay z was raised",
+    "topic_entity": {
+      "m.0zxv5hk": "Can I Live II"
+    },
+    "answer": "Brooklyn",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-2335_f81b2d3ee250e8503f128923a79d3c5a",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T02:50:23",
+    "machine_question": "what is the national anthem of the country where Tsakhur Language is spoken",
+    "question": "What is the national anthem of the place where Tsakhur is spoken?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:location.country.languages_spoken ns:m.027bj_4 . \n?c ns:location.country.national_anthem ?y .\n?y ns:government.national_anthem_of_a_country.anthem ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-2335",
+    "webqsp_question": "what is the national anthem of russia",
+    "topic_entity": {
+      "m.027bj_4": "Tsakhur Language"
+    },
+    "answer": "National Anthem of Russia",
+    "qid_topic_entity": {
+      "Q36853": "Tsakhur Language"
+    }
+  },
+  {
+    "ID": "WebQTest-1965_b3a2ccc81ab934c7f836221d51e151f5",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T12:10:28",
+    "machine_question": "who did the voice for lola bunny and that work as Comedian",
+    "question": "What comedian did the voice for Lola Bunny?",
+    "sparql": "#MANUAL SPARQL\nPREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\n\t{ \n\t  # Film\n\t  ns:m.0534r8 ns:film.film_character.portrayed_in_films ?y .\n\t  ?y ns:film.performance.actor ?x .\n\t  ?y ns:film.performance.special_performance_type ns:m.02nsjvf . #voice\n\t}\n\tUNION\n\t{\n\t  # TV\n\t  ns:m.0534r8 ns:tv.tv_character.appeared_in_tv_program ?y .\n\t  ?y ns:tv.regular_tv_appearance.actor ?x .\n\t}?x ns:people.person.profession ns:m.018gz8 . \n}",
+    "webqsp_ID": "WebQTest-1965",
+    "webqsp_question": "who did the voice for lola bunny",
+    "topic_entity": {
+      "m.0534r8": "Lola Bunny",
+      "m.02nsjvf": "Voice",
+      "m.018gz8": "Comedian"
+    },
+    "answer": "Kristen Wiig",
+    "qid_topic_entity": {
+      "Q1575844": "Lola Bunny",
+      "Q245068": "Comedian"
+    }
+  },
+  {
+    "ID": "WebQTrn-2809_76ad44c32bce2694411c86576bbec2e7",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T04:06:36",
+    "machine_question": "where did the author who published editions for A Catcher in the Rye died",
+    "question": "In which city, did the author that published, A Catcher in the Rye, died?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:book.author.book_editions_published ns:m.04v7gfr . \n?c ns:people.deceased_person.place_of_death ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-2809",
+    "webqsp_question": "where did jerome david salinger died",
+    "topic_entity": {
+      "m.04v7gfr": "A Catcher in the Rye"
+    },
+    "answer": "Cornish",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-2875_625df54cc64b9a3383407af99190cb04",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T04:16:00",
+    "machine_question": "what language do cyprus speak and that has initials el",
+    "question": "What language, with the initials EL, do the people of Cyprus speak?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.01ppq)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.01ppq ns:location.country.languages_spoken ?x .\n?x ns:language.human_language.iso_639_1_code \"el\" . \n}",
+    "webqsp_ID": "WebQTrn-2875",
+    "webqsp_question": "what language do cyprus speak",
+    "topic_entity": {
+      "m.01ppq": "Cyprus"
+    },
+    "answer": "Greek Language",
+    "qid_topic_entity": {
+      "Q229": "Cyprus"
+    }
+  },
+  {
+    "ID": "WebQTest-1539_96ad8e19d4bfae4439f3839b16a5e190",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T10:52:08",
+    "machine_question": "who is the actor that played in the film My Name Is Kate married to 2012",
+    "question": "To whom was the actor who was in the movie \"My Name is Katie\" married in 2012?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:film.actor.film ?k .\n?k ns:film.performance.film ns:m.0bcl581 . \n?c ns:people.person.spouse_s ?y .\n?y ns:people.marriage.spouse ?x .\n?y ns:people.marriage.type_of_union ns:m.04ztj .\n?y ns:people.marriage.from ?sk0 .\n}\nORDER BY DESC(xsd:datetime(?sk0))\nLIMIT 1\n",
+    "webqsp_ID": "WebQTest-1539",
+    "webqsp_question": "who is ryan reynolds married to 2012",
+    "topic_entity": {
+      "m.0bcl581": "My Name Is Kate",
+      "m.04ztj": "Marriage"
+    },
+    "answer": "Blake Lively",
+    "qid_topic_entity": {
+      "Q16681893": "My Name Is Kate",
+      "Q8445": "Marriage"
+    }
+  },
+  {
+    "ID": "WebQTrn-3170_4c56262d6806c8bd5c0fadb75177520a",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T05:01:04",
+    "machine_question": "what does the political appointer that had the title Director for Multilateral Affairs have a degree in",
+    "question": "What degree did the official who held the title Director for Multilateral Affairs have?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:government.political_appointer.appointees ?k .\n?k ns:government.government_position_held.office_position_or_title ns:m.05ftbwf . \n?c ns:people.person.education ?y .\n?y ns:education.education.major_field_of_study ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-3170",
+    "webqsp_question": "what does obama have a degree in",
+    "topic_entity": {
+      "m.05ftbwf": "Director for Multilateral Affairs"
+    },
+    "answer": "Political Science",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-1532_44fde88468878cac60f3380a368f4f7f",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T01:00:28",
+    "machine_question": "what college did harry s. truman attend",
+    "question": "What university wer at some point attended by Harry S. Truman?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:award.award_nominee.award_nominations ?k .\n?k ns:award.award_nomination.nominated_for ns:m.0b9zmh1 . \n?c ns:people.person.education ?y .\n?y ns:education.education.institution ?x .\n?x ns:common.topic.notable_types ns:m.01y2hnl .\n}\n",
+    "webqsp_ID": "WebQTrn-1532",
+    "webqsp_question": "what college did harry s. truman attend",
+    "topic_entity": {
+      "m.0b9zmh1": "Year of Decisions"
+    },
+    "answer": "University of Missouri–Kansas City",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTest-1528_e4576358163b568a25b6d3037836e483",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T10:51:46",
+    "machine_question": "what movies does logan lerman play in and is the film that was  released on 2000-06-27",
+    "question": "What film that was released on 27 June 2000 featured Logan Lerman?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.04f1s6)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.04f1s6 ns:film.actor.film ?y .\n?y ns:film.performance.film ?x .\n?x ns:film.film.release_date_s ?c .\n?c ns:film.film_regional_release_date.release_date \"2000-06-27\"^^xsd:dateTime . \n}",
+    "webqsp_ID": "WebQTest-1528",
+    "webqsp_question": "what movies does logan lerman play in",
+    "topic_entity": {
+      "m.04f1s6": "Logan Lerman"
+    },
+    "answer": "The Patriot",
+    "qid_topic_entity": {
+      "Q221068": "Logan Lerman"
+    }
+  },
+  {
+    "ID": "WebQTrn-1577_9bb8696e995a946240090b32f0713383",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T01:06:58",
+    "machine_question": "where did the author who published editions for Evidence of things not seen go to school",
+    "question": "Where did the author of \"Evidence of Things Not Seen\" go to school?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:book.author.book_editions_published ns:m.04v2zk6 . \n?c ns:people.person.education ?y .\n?y ns:education.education.institution ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-1577",
+    "webqsp_question": "where did james baldwin go to school",
+    "topic_entity": {
+      "m.04v2zk6": "Evidence of things not seen"
+    },
+    "answer": "DeWitt Clinton High School",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-2331_0418d3a7dafa31d4a8c99233f8b93fc2",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T02:49:17",
+    "machine_question": "what type of music did vivaldi write and that was featured in the album Nightingale",
+    "question": "What genre of music is in the album Nightingale and also written by Vivaldi?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0pth)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0pth ns:music.artist.genre ?x .\n?x ns:music.genre.albums ns:m.0105s4cj . \n}",
+    "webqsp_ID": "WebQTrn-2331",
+    "webqsp_question": "what type of music did vivaldi write",
+    "topic_entity": {
+      "m.0pth": "Antonio Vivaldi",
+      "m.0105s4cj": "Nightingale"
+    },
+    "answer": "Classical music",
+    "qid_topic_entity": {
+      "Q1340": "Antonio Vivaldi"
+    }
+  },
+  {
+    "ID": "WebQTrn-125_92e9299022203f700e6002d02143b613",
+    "compositionality_type": "composition",
+    "created": "2017-10-25T21:18:13",
+    "machine_question": "where did the topic of the image Martin Luther King, Jr. got shot",
+    "question": "Where did the subject of the image \"Martin Luther King, Jr.\" get shot?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:common.topic.image ns:m.02bgnz2 . \n?c ns:people.deceased_person.place_of_death ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-125",
+    "webqsp_question": "where did martin luther king got shot",
+    "topic_entity": {
+      "m.02bgnz2": "Martin Luther King, Jr."
+    },
+    "answer": "Memphis",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-1677_b7c844c865f32cdb81c78e8060980249",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T01:20:21",
+    "machine_question": "what movies did adam sandler play in and film casting director was Justine Baddeley",
+    "question": "Which movie was Adam Sandler in that had the film casting director, Justine Baddeley?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0pz91)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0pz91 ns:film.producer.film ?x .\n?x ns:film.film.film_casting_director ns:m.05n808k . \n}",
+    "webqsp_ID": "WebQTrn-1677",
+    "webqsp_question": "what movies did adam sandler play in",
+    "topic_entity": {
+      "m.0pz91": "Adam Sandler",
+      "m.05n808k": "Justine Baddeley"
+    },
+    "answer": "Zookeeper",
+    "qid_topic_entity": {
+      "Q132952": "Adam Sandler"
+    }
+  },
+  {
+    "ID": "WebQTrn-1069_e87644944e029d31491a748a4b4c824b",
+    "compositionality_type": "composition",
+    "created": "2017-10-25T23:50:55",
+    "machine_question": "what language do the governmental jurisdiction that has governmental office holder named SÃ¸ren Pind",
+    "question": "What language is used in the country that has governmental officer named SÃ¸ren Pind?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:government.governmental_jurisdiction.governing_officials ?k .\n?k ns:government.government_position_held.office_holder ns:m.0gh8vr1 . \n?c ns:location.country.languages_spoken ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-1069",
+    "webqsp_question": "what language do denmark",
+    "topic_entity": {
+      "m.0gh8vr1": "Søren Pind"
+    },
+    "answer": "German Language",
+    "qid_topic_entity": {
+      "Q3078007": "Søren Pind"
+    }
+  },
+  {
+    "ID": "WebQTrn-2319_ec5586b8afdc20aa27592c03e67e0f4f",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T02:48:11",
+    "machine_question": "what is the official language of the the governmental jurisdiction that has governmental office holder named Anatoliy Kinakh",
+    "question": "What are the official languages in the country with government official named Anatoliy Kinakh?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:government.governmental_jurisdiction.governing_officials ?k .\n?k ns:government.government_position_held.office_holder ns:m.04hl61 . \n?c ns:location.country.languages_spoken ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-2319",
+    "webqsp_question": "what is the official language of the ukraine",
+    "topic_entity": {
+      "m.04hl61": "Anatoliy Kinakh"
+    },
+    "answer": "Moldovan language",
+    "qid_topic_entity": {
+      "Q488180": "Anatoliy Kinakh"
+    }
+  },
+  {
+    "ID": "WebQTrn-1278_9ddd77154bbd5aa55ea6b7d543dceaac",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T00:21:05",
+    "machine_question": "who did the subject of the film Tupac: Hip Hop Genius date",
+    "question": "The subject of the movie Tupac: Hip Hop Genius dated whom?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:film.film_subject.films ns:m.0zn8y2b . \n?c ns:base.popstra.celebrity.dated ?y .\n?y ns:base.popstra.dated.participant ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-1278",
+    "webqsp_question": "who did tupac shakur date",
+    "topic_entity": {
+      "m.0zn8y2b": "Tupac: Hip Hop Genius"
+    },
+    "answer": "Jada Pinkett Smith",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-2653_ce6428806014c16be5c15e9deca77b6b",
+    "compositionality_type": "comparative",
+    "created": "2017-10-26T03:40:01",
+    "machine_question": "what wars have france been involved in and is the event ended after 1809-07-28",
+    "question": "What wars in which France has been involved are events that ended later than 28 July 1809?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0f8l9c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0f8l9c ns:military.military_combatant.casualties ?y .\n?y ns:military.casualties.military_conflict ?x .\n?x ns:time.event.end_date ?num .\nFILTER (?num > \"1809-07-28\"^^xsd:dateTime) . \n}",
+    "webqsp_ID": "WebQTrn-2653",
+    "webqsp_question": "what wars have france been involved in",
+    "topic_entity": {
+      "m.0f8l9c": "France"
+    },
+    "answer": "Gulf War",
+    "qid_topic_entity": {
+      "Q142": "France"
+    }
+  },
+  {
+    "ID": "WebQTrn-3251_1a90de3e56087702d12f5ac656bd7be0",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T05:14:34",
+    "machine_question": "what college is in greeley colorado and is the university that has number of undergraduates 40",
+    "question": "What college in Greeley, Colorado has 40 undergraduates?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0rczx)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0rczx ns:location.location.contains ?x .\n?x ns:common.topic.notable_types ns:m.01y2hnl .\n?x ns:education.university.number_of_undergraduates ?c .\n?c ns:measurement_unit.dated_integer.number \"40\" . \n}",
+    "webqsp_ID": "WebQTrn-3251",
+    "webqsp_question": "what college is in greeley colorado",
+    "topic_entity": {
+      "m.0rczx": "Greeley"
+    },
+    "answer": "Academy of Natural Therapy",
+    "qid_topic_entity": {
+      "Q94274": "Greeley"
+    }
+  },
+  {
+    "ID": "WebQTrn-25_a595672eac8b0f404df1cdec081c2e10",
+    "compositionality_type": "composition",
+    "created": "2017-10-25T21:06:07",
+    "machine_question": "what movies does the topic of the image Empire9.jpg play in",
+    "question": "What movies does the subject of the image \"Empire9.jpg\" play in?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:common.topic.image ns:m.0b7bx_k . \n?c ns:film.actor.film ?y .\n?y ns:film.performance.film ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-25",
+    "webqsp_question": "what movies does taylor lautner play in",
+    "topic_entity": {
+      "m.0b7bx_k": "Empire9.jpg"
+    },
+    "answer": "The Twilight Saga: Breaking Dawn - Part 1",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-513_5a15eae658cc54d81698d2e5e68e82c0",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-25T22:25:28",
+    "machine_question": "what countries fall in eastern europe and the country calling code is 373",
+    "question": "What country with the calling code 373 is in Eastern Europe?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.09b69)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.09b69 ns:location.location.contains ?x .\n?x ns:common.topic.notable_types ns:m.01mp .\n?x ns:location.country.calling_code \"373\" . \n}",
+    "webqsp_ID": "WebQTrn-513",
+    "webqsp_question": "what countries fall in eastern europe",
+    "topic_entity": {
+      "m.09b69": "Eastern Europe"
+    },
+    "answer": "Moldova",
+    "qid_topic_entity": {
+      "Q27468": "Eastern Europe"
+    }
+  },
+  {
+    "ID": "WebQTrn-2784_e35bbe9c7fc2677853b0df65b7b656f6",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T04:03:46",
+    "machine_question": "what movies does tupac act in and it's genre is Drama",
+    "question": "What drama movies did Tupac play in?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.07pzc)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.07pzc ns:film.actor.film ?y .\n?y ns:film.performance.film ?x .\n?x ns:media_common.netflix_title.netflix_genres ns:m.02822 . \n}",
+    "webqsp_ID": "WebQTrn-2784",
+    "webqsp_question": "what movies does tupac act in",
+    "topic_entity": {
+      "m.07pzc": "Tupac Shakur",
+      "m.02822": "Drama"
+    },
+    "answer": "Poetic Justice",
+    "qid_topic_entity": {
+      "Q6107": "Tupac Shakur",
+      "Q25372": "Drama"
+    }
+  },
+  {
+    "ID": "WebQTrn-3769_6e0a31334a35147f868ae514f9eb9ab8",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T06:39:34",
+    "machine_question": "what county is the area in which the newspaper Orlando Business Journal is circulated in",
+    "question": "What county is the \"Orlando Business Journal\" circulated in?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:periodicals.newspaper_circulation_area.newspapers ns:m.04f4mxk . \n?c ns:location.hud_county_place.county ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-3769",
+    "webqsp_question": "what county is orlando fl in",
+    "topic_entity": {
+      "m.04f4mxk": "Orlando Business Journal"
+    },
+    "answer": "Orange County",
+    "qid_topic_entity": {
+      "Q7103060": "Orlando Business Journal"
+    }
+  },
+  {
+    "ID": "WebQTest-1000_c03787125499031191feea58eae0de36",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T09:16:46",
+    "machine_question": "what countries included in oceania and the location's emissions per capita in dated metric ton is 0.091351",
+    "question": "What countries in Oceania, that have the emissions per capita in dated metric ton of 0.091351?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.05nrg)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.05nrg ns:location.location.contains ?x .\n?x ns:base.biblioness.bibs_location.loc_type ?sk0 .\nFILTER (str(?sk0) = \"Country\")\n?x ns:location.statistical_region.co2_emissions_per_capita ?c .\n?c ns:measurement_unit.dated_metric_ton.number \"0.091351\" . \n}",
+    "webqsp_ID": "WebQTest-1000",
+    "webqsp_question": "what countries included in oceania",
+    "topic_entity": {
+      "m.05nrg": "Oceania"
+    },
+    "answer": "Papua New Guinea",
+    "qid_topic_entity": {
+      "Q538": "Oceania"
+    }
+  },
+  {
+    "ID": "WebQTrn-2271_d9b83d585e786de1c9d61037d0279b00",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T02:39:46",
+    "machine_question": "what religion does the actor that played the character Vincent Lauria follow",
+    "question": "What religion is practiced by the actor who player the movie character Vincent Lauria?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:film.actor.film ?k .\n?k ns:film.performance.character ns:m.04jt3kw . \n?c ns:base.popstra.celebrity.religion ?y .\n?y ns:base.popstra.religion_choice.religion ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-2271",
+    "webqsp_question": "what religion does tom cruise follow",
+    "topic_entity": {
+      "m.04jt3kw": "Vincent Lauria"
+    },
+    "answer": "Scientology",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTest-212_a5e3e004e8a3ba709d16682f32e12f2f",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T07:10:07",
+    "machine_question": "which states does the colorado river run through and have governmental jurisdiction location symbol  that was adapted on 1861-11-06",
+    "question": "What state does the Colorado River run through that has a governmental jurisdiction location symbol that was adapted on November 16, 1861?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.018qjq)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.018qjq ns:location.location.partially_containedby ?x .\n?x ns:base.biblioness.bibs_location.loc_type ?sk0 .\nFILTER (str(?sk0) = \"State\")\n?x ns:government.governmental_jurisdiction.official_symbols ?c .\n?c ns:location.location_symbol_relationship.date_adopted \"1861-11-06\"^^xsd:dateTime . \n}",
+    "webqsp_ID": "WebQTest-212",
+    "webqsp_question": "which states does the colorado river run through",
+    "topic_entity": {
+      "m.018qjq": "Colorado River"
+    },
+    "answer": "Colorado",
+    "qid_topic_entity": {
+      "Q1265": "Colorado River"
+    }
+  },
+  {
+    "ID": "WebQTrn-3084_d7a8cbddd43733cfb78c3d41af704745",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T04:47:45",
+    "machine_question": "what country does japan export to and the country calling code is 249",
+    "question": "Which country who trades with Japan has a country calling code of 249?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.03_3d)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.03_3d ns:location.statistical_region.places_exported_to ?y .\n?y ns:location.imports_and_exports.exported_to ?x .\n?x ns:location.country.calling_code \"249\" . \n}",
+    "webqsp_ID": "WebQTrn-3084",
+    "webqsp_question": "what country does japan export to",
+    "topic_entity": {
+      "m.03_3d": "Japan"
+    },
+    "answer": "Sudan",
+    "qid_topic_entity": {
+      "Q17": "Japan"
+    }
+  },
+  {
+    "ID": "WebQTest-743_3a40921ae6042ff93cc654f727b80209",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T08:35:27",
+    "machine_question": "what was the name of the artist which recorded Happy Birthday, Mr. President 's brothers",
+    "question": "What were the names of the brothers of the man to whom \"Happy Birthday, Mr. President\" was sung?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:music.featured_artist.recordings ns:m.0_jd323 . \n?c ns:people.person.sibling_s ?y .\n?y ns:people.sibling_relationship.sibling ?x .\n?x ns:people.person.gender ns:m.05zppz .\n}\n",
+    "webqsp_ID": "WebQTest-743",
+    "webqsp_question": "what was the name of jfk 's brothers",
+    "topic_entity": {
+      "m.0_jd323": "Happy Birthday, Mr. President",
+      "m.05zppz": "Male"
+    },
+    "answer": "Robert F. Kennedy",
+    "qid_topic_entity": {
+      "Q44148": "Male"
+    }
+  },
+  {
+    "ID": "WebQTrn-2006_2b51730f4094adff3ff2ea58da9b361f",
+    "compositionality_type": "comparative",
+    "created": "2017-10-26T02:06:01",
+    "machine_question": "what magazine did edgar allan poe work for and publication start date before 1844",
+    "question": "For what magazine that began production prior to 1844 did Edgar Allan Poe work?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.02lt8)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.02lt8 ns:book.periodical_editor.periodicals_edited ?y .\n?y ns:book.editorial_tenure.periodical ?x .\n?x ns:book.magazine.place_of_publication ?c .\n?c ns:book.place_of_publication_period.from ?num .\nFILTER (?num < \"1844\"^^xsd:dateTime) . \n}",
+    "webqsp_ID": "WebQTrn-2006",
+    "webqsp_question": "what magazine did edgar allan poe work for",
+    "topic_entity": {
+      "m.02lt8": "Edgar Allan Poe"
+    },
+    "answer": "Burton's Gentleman's Magazine",
+    "qid_topic_entity": {
+      "Q16867": "Edgar Allan Poe"
+    }
+  },
+  {
+    "ID": "WebQTrn-3376_e00a8eab7666e17c83d8acab6d4e1a8b",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T05:34:14",
+    "machine_question": "where did the actor that played the character Pawn Shop Employee go to school",
+    "question": "The actor that  portrayed the character Pawn Shop Employee attended which school?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:film.actor.film ?k .\n?k ns:film.performance.character ns:m.0t5k293 . \n?c ns:people.person.education ?y .\n?y ns:education.education.institution ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-3376",
+    "webqsp_question": "where did kevin hart go to school",
+    "topic_entity": {
+      "m.0t5k293": "Pawn Shop Employee"
+    },
+    "answer": "Temple University",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-1841_5db11dc211d128cdb6d6d746436d2ea0",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T01:41:53",
+    "machine_question": "what are popular sports in spain and has a Defender on its sports team roster",
+    "question": "What popular sports team in Spain has a Defender as a position on it's roster?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.06mkj)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.06mkj ns:sports.sports_team_location.teams ?x .\n?x ns:sports.sports_team.roster ?c .\n?c ns:sports.sports_team_roster.position ns:m.02_j1w . \n}",
+    "webqsp_ID": "WebQTrn-1841",
+    "webqsp_question": "what are popular sports in spain",
+    "topic_entity": {
+      "m.06mkj": "Spain",
+      "m.02_j1w": "Defender"
+    },
+    "answer": "Spain national football team",
+    "qid_topic_entity": {
+      "Q29": "Spain",
+      "Q336286": "Defender"
+    }
+  },
+  {
+    "ID": "WebQTrn-2069_c1d589c22e4bcb71dd3832d4a8a1dbe9",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T02:15:08",
+    "machine_question": "what language chile speak and that was featured in the work Beloved",
+    "question": "What is the language spoken in Chile that was in \"Beloved\"?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.01p1v)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.01p1v ns:location.country.languages_spoken ?x .\n?x ns:book.book_subject.works ns:m.04nrl5 . \n}",
+    "webqsp_ID": "WebQTrn-2069",
+    "webqsp_question": "what language chile speak",
+    "topic_entity": {
+      "m.01p1v": "Chile",
+      "m.04nrl5": "Beloved"
+    },
+    "answer": "Spanish Language",
+    "qid_topic_entity": {
+      "Q298": "Chile",
+      "Q971767": "Beloved"
+    }
+  },
+  {
+    "ID": "WebQTrn-849_fa1fffe7995213b6528da57ea4c8d226",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-25T23:14:05",
+    "machine_question": "which countries do germany border and number of people in the country's army is 101000",
+    "question": "Which country, with an army of 101,000, borders Germany?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0345h)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0345h ns:location.location.adjoin_s ?y .\n?y ns:location.adjoining_relationship.adjoins ?x .\n?x ns:common.topic.notable_types ns:m.01mp .\n?x ns:location.statistical_region.size_of_armed_forces ?c .\n?c ns:measurement_unit.dated_integer.number \"101000\" . \n}",
+    "webqsp_ID": "WebQTrn-849",
+    "webqsp_question": "which countries do germany border",
+    "topic_entity": {
+      "m.0345h": "Germany"
+    },
+    "answer": "Belgium",
+    "qid_topic_entity": {
+      "Q183": "Germany"
+    }
+  },
+  {
+    "ID": "WebQTest-1797_1f7ee4adbac76b1d1b843f0c8b106892",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T11:32:38",
+    "machine_question": "who fought in the battle of vicksburg and was buried in General Grant National Memorial",
+    "question": "Who is the person that fought in the Battle of Vicksburg and is buried in the General Grant National Memorial?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.01hf7f)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.01hf7f ns:base.culturalevent.event.entity_involved ?x .\n?x ns:people.deceased_person.place_of_burial ns:m.06_3v55 . \n}",
+    "webqsp_ID": "WebQTest-1797",
+    "webqsp_question": "who fought in the battle of vicksburg",
+    "topic_entity": {
+      "m.01hf7f": "Siege of Vicksburg",
+      "m.06_3v55": "General Grant National Memorial"
+    },
+    "answer": "Ulysses S. Grant",
+    "qid_topic_entity": {
+      "Q1066253": "Siege of Vicksburg",
+      "Q1025105": "General Grant National Memorial"
+    }
+  },
+  {
+    "ID": "WebQTrn-513_1cc5966b9116d764e8883a0c24d8b782",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-25T22:25:28",
+    "machine_question": "what countries fall in eastern europe and produce the beer Zagorka Original Lager",
+    "question": "Which Eastern European country makes Zagorka Original Lager?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.09b69)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.09b69 ns:location.location.contains ?x .\n?x ns:common.topic.notable_types ns:m.01mp .\n?x ns:food.beer_country_region.beers_from_here ns:m.04dqf0k . \n}",
+    "webqsp_ID": "WebQTrn-513",
+    "webqsp_question": "what countries fall in eastern europe",
+    "topic_entity": {
+      "m.09b69": "Eastern Europe",
+      "m.04dqf0k": "Zagorka Original Lager"
+    },
+    "answer": "Bulgaria",
+    "qid_topic_entity": {
+      "Q27468": "Eastern Europe"
+    }
+  },
+  {
+    "ID": "WebQTest-212_828b79d960f806ea9d291b87184103cd",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T07:10:07",
+    "machine_question": "which states does the river that flows through Las Vegas run through",
+    "question": "What states does the river that runs through Las Vegas also cuts through?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:geography.river.cities ns:m.0cv3w . \n?c ns:location.location.partially_containedby ?x .\n?x ns:base.biblioness.bibs_location.loc_type ?sk0 .\nFILTER (str(?sk0) = \"State\")\n}\n",
+    "webqsp_ID": "WebQTest-212",
+    "webqsp_question": "which states does the colorado river run through",
+    "topic_entity": {
+      "m.0cv3w": "Las Vegas"
+    },
+    "answer": "Arizona",
+    "qid_topic_entity": {
+      "Q23768": "Las Vegas"
+    }
+  },
+  {
+    "ID": "WebQTrn-2100_faefa67fba5946fa87b438a6df0b8e63",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T02:16:56",
+    "machine_question": "where are has an organization headquarters located in the citytown Curno brakes from",
+    "question": "What city can the headquarters for Curno Brakes be found?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:organization.organization.headquarters ?k .\n?k ns:location.mailing_address.citytown ns:m.0gj9zx . \n?c ns:organization.organization.headquarters ?y .\n?y ns:location.mailing_address.citytown ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-2100",
+    "webqsp_question": "where are brembo brakes from",
+    "topic_entity": {
+      "m.0gj9zx": "Curno"
+    },
+    "answer": "Curno",
+    "qid_topic_entity": {
+      "Q100654": "Curno"
+    }
+  },
+  {
+    "ID": "WebQTrn-484_62fc8fb27e9c5c32e70a8a87349f3de4",
+    "compositionality_type": "composition",
+    "created": "2017-10-25T22:18:55",
+    "machine_question": "what do you call money in the area in which the newspaper Brasil em Folhas is circulated",
+    "question": "What currency is used in the area where the newspaper Brasil em Folhas is circulated?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:periodicals.newspaper_circulation_area.newspapers ns:m.03c5k5h . \n?c ns:location.country.currency_used ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-484",
+    "webqsp_question": "what do you call money in brazil",
+    "topic_entity": {
+      "m.03c5k5h": "Brasil em Folhas"
+    },
+    "answer": "Brazilian real",
+    "qid_topic_entity": {
+      "Q4957806": "Brasil em Folhas"
+    }
+  },
+  {
+    "ID": "WebQTrn-25_23b0132339644b875bf6a966c5b0c131",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-25T21:06:07",
+    "machine_question": "what movies does taylor lautner play in and that had a sequel named The Twilight Saga: Breaking Dawn - Part 1",
+    "question": "Which Taylor Lautner movie has a sequel titled \"The Twilight Saga: Breaking Dawn - Part 1\"?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.07ldhs)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.07ldhs ns:film.actor.film ?y .\n?y ns:film.performance.film ?x .\n?x ns:film.film.sequel ns:m.075wx89 . \n}",
+    "webqsp_ID": "WebQTrn-25",
+    "webqsp_question": "what movies does taylor lautner play in",
+    "topic_entity": {
+      "m.07ldhs": "Taylor Lautner",
+      "m.075wx89": "The Twilight Saga: Breaking Dawn - Part 1"
+    },
+    "answer": "Eclipse",
+    "qid_topic_entity": {
+      "Q23359": "Taylor Lautner",
+      "Q60506": "The Twilight Saga: Breaking Dawn - Part 1"
+    }
+  },
+  {
+    "ID": "WebQTest-361_ea09afeb5a95dce3146077f968ff11f9",
+    "compositionality_type": "superlative",
+    "created": "2017-10-26T07:38:26",
+    "machine_question": "what to do and see in vienna austria and the venue capacity is smallest",
+    "question": "Of the many things to do and see in Vienna, Austira, what has the smallest venue capacity?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0fhp9)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0fhp9 ns:travel.travel_destination.tourist_attractions ?x .\n?x ns:architecture.venue.capacity ?num .\n}\nORDER BY xsd:integer(?num) LIMIT 1",
+    "webqsp_ID": "WebQTest-361",
+    "webqsp_question": "what to do and see in vienna austria",
+    "topic_entity": {
+      "m.0fhp9": "Vienna"
+    },
+    "answer": "Vienna State Opera",
+    "qid_topic_entity": {
+      "Q1741": "Vienna"
+    }
+  },
+  {
+    "ID": "WebQTrn-25_2a2de50d3b65cc5d2c88f54e283a4b8a",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-25T21:06:07",
+    "machine_question": "what movies does taylor lautner play in and is the film was released to the distribution medium Video",
+    "question": "What movie featured Taylor Lautner and was released straight to video?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.07ldhs)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.07ldhs ns:film.actor.film ?y .\n?y ns:film.performance.film ?x .\n?x ns:film.film.release_date_s ?c .\n?c ns:film.film_regional_release_date.film_release_distribution_medium ns:m.07z4p . \n}",
+    "webqsp_ID": "WebQTrn-25",
+    "webqsp_question": "what movies does taylor lautner play in",
+    "topic_entity": {
+      "m.07ldhs": "Taylor Lautner",
+      "m.07z4p": "Video"
+    },
+    "answer": "Shadow Fury",
+    "qid_topic_entity": {
+      "Q23359": "Taylor Lautner",
+      "Q34508": "Video"
+    }
+  },
+  {
+    "ID": "WebQTest-1785_a4ff15819ebbf43f35bfdbb9fe6e3828",
+    "compositionality_type": "superlative",
+    "created": "2017-10-26T11:32:06",
+    "machine_question": "what was kim richards in and is the film that was  released earliest",
+    "question": "which film starring Kim Richards was released earliest?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.08l257)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.08l257 ns:film.actor.film ?y .\n?y ns:film.performance.film ?x .\n?x ns:film.film.release_date_s ?c .\n?c ns:film.film_regional_release_date.release_date ?num .\n}\nORDER BY ?num LIMIT 1",
+    "webqsp_ID": "WebQTest-1785",
+    "webqsp_question": "what was kim richards in",
+    "topic_entity": {
+      "m.08l257": "Kim Richards"
+    },
+    "answer": "Escape to Witch Mountain",
+    "qid_topic_entity": {
+      "Q587156": "Kim Richards"
+    }
+  },
+  {
+    "ID": "WebQTrn-513_91838a7ede712ea5f4252ba9c55f77b0",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-25T22:25:28",
+    "machine_question": "what countries fall in eastern europe and the country calling code is 359",
+    "question": "What country in Eastern Europe that has the calling code of 359?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.09b69)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.09b69 ns:location.location.contains ?x .\n?x ns:common.topic.notable_types ns:m.01mp .\n?x ns:location.country.calling_code \"359\" . \n}",
+    "webqsp_ID": "WebQTrn-513",
+    "webqsp_question": "what countries fall in eastern europe",
+    "topic_entity": {
+      "m.09b69": "Eastern Europe"
+    },
+    "answer": "Bulgaria",
+    "qid_topic_entity": {
+      "Q27468": "Eastern Europe"
+    }
+  },
+  {
+    "ID": "WebQTest-397_6a55c4db008678557d668691ba885210",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T07:43:22",
+    "machine_question": "what are the school colors for the publisher of the periodical journal Harvard Review",
+    "question": "About the school that publishes the Harvard Review, what are its school colors?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:book.periodical_publisher.periodicals_published ?k .\n?k ns:book.periodical_publisher_period.periodical ns:m.02zb6m_ . \n?c ns:education.educational_institution.colors ?x .\n}\n",
+    "webqsp_ID": "WebQTest-397",
+    "webqsp_question": "what are the school colors for harvard university",
+    "topic_entity": {
+      "m.02zb6m_": "Harvard Review"
+    },
+    "answer": "Crimson",
+    "qid_topic_entity": {
+      "Q5676540": "Harvard Review"
+    }
+  },
+  {
+    "ID": "WebQTrn-831_f2d789d28c11bc5b682263b07195d208",
+    "compositionality_type": "composition",
+    "created": "2017-10-25T23:04:24",
+    "machine_question": "what is the last movie the artist which recorded Faster Kill Pussycat made",
+    "question": "What is the last movie by the artist who recorded Faster Kill Pussycat?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:music.featured_artist.recordings ns:m.01dzlwv . \n?c ns:film.actor.film ?y .\n?y ns:film.performance.film ?x .\n?x ns:film.film.initial_release_date ?sk0 .\n}\nORDER BY DESC(xsd:datetime(?sk0))\nLIMIT 1\n",
+    "webqsp_ID": "WebQTrn-831",
+    "webqsp_question": "what is the last movie brittany murphy made",
+    "topic_entity": {
+      "m.01dzlwv": "Faster Kill Pussycat"
+    },
+    "answer": "Something Wicked",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-60_ef708be5cfc5c1fcaa9a96b91aa6028a",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-25T21:09:42",
+    "machine_question": "what countries do people speak portuguese and is in Eurasia",
+    "question": "What countries in Eurasia do people speak portuguese?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.05zjd)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.05zjd ns:language.human_language.countries_spoken_in ?x .\n?x ns:location.location.containedby ns:m.02qkt . \n}",
+    "webqsp_ID": "WebQTrn-60",
+    "webqsp_question": "what countries do people speak portuguese",
+    "topic_entity": {
+      "m.05zjd": "Portuguese Language",
+      "m.02qkt": "Eurasia"
+    },
+    "answer": "Timor-Leste",
+    "qid_topic_entity": {
+      "Q5146": "Portuguese Language",
+      "Q5401": "Eurasia"
+    }
+  },
+  {
+    "ID": "WebQTest-1251_cb535b26088aa7a8cf49a7aba65ef3d3",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T09:57:03",
+    "machine_question": "which countries speak germanic languages and country has nominal gdp currency of United States Dollar",
+    "question": "What country speaks Germanic and uses a USD nominal GDP currency?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.04306rv)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.04306rv ns:language.human_language.countries_spoken_in ?x .\n?x ns:location.country.official_language ns:m.04306rv .\n?x ns:location.country.gdp_nominal ?c .\n?c ns:measurement_unit.dated_money_value.currency ns:m.09nqf . \n}",
+    "webqsp_ID": "WebQTest-1251",
+    "webqsp_question": "which countries speak germanic languages",
+    "topic_entity": {
+      "m.04306rv": "German Language",
+      "m.09nqf": "United States Dollar"
+    },
+    "answer": "Austria",
+    "qid_topic_entity": {
+      "Q188": "German Language",
+      "Q4917": "United States Dollar"
+    }
+  },
+  {
+    "ID": "WebQTrn-2818_afea22a6b6053661163da4f6fdfdbc5e",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T04:07:56",
+    "machine_question": "where does river that flows through Kazan start",
+    "question": "Where is the starting point of the river that flows through Kazan?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:geography.river.cities ns:m.01cr28 . \n?c ns:geography.river.origin ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-2818",
+    "webqsp_question": "where does volga river start",
+    "topic_entity": {
+      "m.01cr28": "Kazan"
+    },
+    "answer": "Valdai Hills",
+    "qid_topic_entity": {
+      "Q900": "Kazan"
+    }
+  },
+  {
+    "ID": "WebQTrn-849_7f4713671a7c33559720de5fdd36517e",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-25T23:14:05",
+    "machine_question": "which countries do germany border and contains Stadhuis",
+    "question": "What country, containing Stadhuis, does Germany border?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0345h)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0345h ns:location.location.adjoin_s ?y .\n?y ns:location.adjoining_relationship.adjoins ?x .\n?x ns:common.topic.notable_types ns:m.01mp .\n?x ns:location.location.contains ns:g.119v5zx6b . \n}",
+    "webqsp_ID": "WebQTrn-849",
+    "webqsp_question": "which countries do germany border",
+    "topic_entity": {
+      "m.0345h": "Germany"
+    },
+    "answer": "Netherlands",
+    "qid_topic_entity": {
+      "Q183": "Germany"
+    }
+  },
+  {
+    "ID": "WebQTrn-3251_01081659a60a9424dd32f0873cd17c3c",
+    "compositionality_type": "comparative",
+    "created": "2017-10-26T05:14:34",
+    "machine_question": "what college is in greeley colorado and is the university that has number of undergraduates less than 10102",
+    "question": "What colleges in Greeley Colorado have fewer than 10102 undergraduates?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0rczx)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0rczx ns:location.location.contains ?x .\n?x ns:common.topic.notable_types ns:m.01y2hnl .\n?x ns:education.university.number_of_undergraduates ?c .\n?c ns:measurement_unit.dated_integer.number ?num .\nFILTER (xsd:integer(?num) < 10102) . \n}",
+    "webqsp_ID": "WebQTrn-3251",
+    "webqsp_question": "what college is in greeley colorado",
+    "topic_entity": {
+      "m.0rczx": "Greeley"
+    },
+    "answer": "Academy of Natural Therapy",
+    "qid_topic_entity": {
+      "Q94274": "Greeley"
+    }
+  },
+  {
+    "ID": "WebQTrn-849_8880884172395f9aedf8d116c1aef94d",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-25T23:14:05",
+    "machine_question": "which countries do germany border and country that its currency of nomianl gdp per capita is United States Dollar",
+    "question": "Which countries border Germany and has the United States dollar as their nomianl gdp per capita.?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0345h)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0345h ns:location.location.adjoin_s ?y .\n?y ns:location.adjoining_relationship.adjoins ?x .\n?x ns:common.topic.notable_types ns:m.01mp .\n?x ns:location.country.gdp_nominal_per_capita ?c .\n?c ns:measurement_unit.dated_money_value.currency ns:m.09nqf . \n}",
+    "webqsp_ID": "WebQTrn-849",
+    "webqsp_question": "which countries do germany border",
+    "topic_entity": {
+      "m.0345h": "Germany",
+      "m.09nqf": "United States Dollar"
+    },
+    "answer": "Austria",
+    "qid_topic_entity": {
+      "Q183": "Germany",
+      "Q4917": "United States Dollar"
+    }
+  },
+  {
+    "ID": "WebQTrn-493_62c02cbade573589cf6451ac08d03b2b",
+    "compositionality_type": "composition",
+    "created": "2017-10-25T22:21:27",
+    "machine_question": "where is the country where Picard Language is spoken at",
+    "question": "Picard Language is spoken where?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:location.country.languages_spoken ns:m.02drlb . \n?c ns:location.location.containedby ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-493",
+    "webqsp_question": "where is belgium at",
+    "topic_entity": {
+      "m.02drlb": "Picard Language"
+    },
+    "answer": "Eurasia",
+    "qid_topic_entity": {
+      "Q34024": "Picard Language"
+    }
+  },
+  {
+    "ID": "WebQTrn-62_632b1d8fd7ba66275f6f8d40ed044a13",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-25T21:09:49",
+    "machine_question": "what are the names of walt disney kids and that work as Actor",
+    "question": "What are the names of current actors that also worked as Disney kids?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.081nh)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.081nh ns:people.person.children ?x .\n?x ns:people.person.profession ns:m.02hrh1q . \n}",
+    "webqsp_ID": "WebQTrn-62",
+    "webqsp_question": "what are the names of walt disney kids",
+    "topic_entity": {
+      "m.081nh": "Walt Disney",
+      "m.02hrh1q": "Actor"
+    },
+    "answer": "Diane Disney Miller",
+    "qid_topic_entity": {
+      "Q8704": "Walt Disney",
+      "Q33999": "Actor"
+    }
+  },
+  {
+    "ID": "WebQTrn-1405_af8b975343e4098913128e9ac7d04c05",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T00:40:40",
+    "machine_question": "where did president the public speaker which spoke about Anti-Apartheid go to school",
+    "question": "Where did the Anti-Apartheid president public speaker attend school?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:event.public_speaker.speeches_or_presentations ?k .\n?k ns:event.speech_or_presentation.speech_topic ns:m.04lxyz0 . \n?c ns:people.person.education ?y .\n?y ns:education.education.institution ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-1405",
+    "webqsp_question": "where did president kennedy go to school",
+    "topic_entity": {
+      "m.04lxyz0": "Anti-Apartheid"
+    },
+    "answer": "Harvard University",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTest-998_47e95c73ec76579a8d66b6e1607df389",
+    "compositionality_type": "composition",
+    "created": "2018-02-13T04:30:37",
+    "machine_question": "when was the last time the basket ball team head coach is Derek Fisher won the championship",
+    "question": "When was the last time the basketball team whose head coach is Derek Fisher won the national championship?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:basketball.basketball_team.head_coach ns:m.04lvwk . \n?c ns:sports.sports_team.championships ?x .\n?x ns:time.event.start_date ?sk0 .\n}\nORDER BY DESC(xsd:datetime(?sk0))\nLIMIT 1\n",
+    "webqsp_ID": "WebQTest-998",
+    "webqsp_question": "when was the last time knicks won the championship",
+    "topic_entity": {
+      "m.04lvwk": "Derek Fisher"
+    },
+    "answer": "1973 NBA Finals",
+    "qid_topic_entity": {
+      "Q314621": "Derek Fisher"
+    }
+  },
+  {
+    "ID": "WebQTest-1513_e367034b3791913e53838cc9c20880df",
+    "compositionality_type": "conjunction",
+    "created": "2018-02-13T05:30:11",
+    "machine_question": "what to do downtown sacramento and is the zoo that opened on 1927-06-02",
+    "question": "What zoo opened on June 2, 1927 is something to do in Downtown Sacramento?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.07bcn)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.07bcn ns:travel.travel_destination.tourist_attractions ?x .\n?x ns:zoos.zoo.opened \"1927-06-02\"^^xsd:dateTime . \n}",
+    "webqsp_ID": "WebQTest-1513",
+    "webqsp_question": "what to do downtown sacramento",
+    "topic_entity": {
+      "m.07bcn": "Sacramento"
+    },
+    "answer": "Sacramento Zoo",
+    "qid_topic_entity": {
+      "Q18013": "Sacramento"
+    }
+  },
+  {
+    "ID": "WebQTest-1178_08a3071aec88af141fc20ed22cfff0e2",
+    "compositionality_type": "composition",
+    "created": "2018-02-13T04:51:26",
+    "machine_question": "where is the person who once lived in Marin City from originally",
+    "question": "A person who once lived in Marin City is originally from where?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:people.person.places_lived ?k .\n?k ns:people.place_lived.location ns:m.053myr . \n?c ns:people.person.place_of_birth ?x .\n}\n",
+    "webqsp_ID": "WebQTest-1178",
+    "webqsp_question": "where is tupac from originally",
+    "topic_entity": {
+      "m.053myr": "Marin City"
+    },
+    "answer": "East Harlem",
+    "qid_topic_entity": {
+      "Q2586362": "Marin City"
+    }
+  },
+  {
+    "ID": "WebQTest-1603_dc77e098c55d228b443e6bb57725461e",
+    "compositionality_type": "composition",
+    "created": "2018-02-13T05:38:56",
+    "machine_question": "what is the sacred text of the religion notable figure is Laozi",
+    "question": "What is the sacred text of the religion with Laozi?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:religion.religion.notable_figures ns:m.0h9wp . \n?c ns:religion.religion.texts ?x .\n}\n",
+    "webqsp_ID": "WebQTest-1603",
+    "webqsp_question": "what is the sacred text of daoism",
+    "topic_entity": {
+      "m.0h9wp": "Laozi"
+    },
+    "answer": "Zhuang Zhou",
+    "qid_topic_entity": {
+      "Q9333": "Laozi"
+    }
+  },
+  {
+    "ID": "WebQTest-1797_94c181aaf8b644fe1097542faa7a4cf0",
+    "compositionality_type": "superlative",
+    "created": "2017-10-26T11:32:38",
+    "machine_question": "who fought in the battle of vicksburg and ended governmental position earliest",
+    "question": "Who was the person who fought in the Battle of Vicksburg who ended their position the earliest?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.01hf7f)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.01hf7f ns:base.culturalevent.event.entity_involved ?x .\n?x ns:government.political_appointer.appointees ?c .\n?c ns:government.government_position_held.to ?num .\n}\nORDER BY ?num LIMIT 1",
+    "webqsp_ID": "WebQTest-1797",
+    "webqsp_question": "who fought in the battle of vicksburg",
+    "topic_entity": {
+      "m.01hf7f": "Siege of Vicksburg"
+    },
+    "answer": "Ulysses S. Grant",
+    "qid_topic_entity": {
+      "Q1066253": "Siege of Vicksburg"
+    }
+  },
+  {
+    "ID": "WebQTrn-1841_c3808447f569d7d699f81f51a87260c4",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T01:41:53",
+    "machine_question": "what are popular sports in spain and is the sports team was founded in 1913",
+    "question": "What popular sport in Spain has a sports team that was founded in 1913?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.06mkj)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.06mkj ns:sports.sports_team_location.teams ?x .\n?x ns:sports.sports_team.founded \"1913\"^^xsd:dateTime . \n}",
+    "webqsp_ID": "WebQTrn-1841",
+    "webqsp_question": "what are popular sports in spain",
+    "topic_entity": {
+      "m.06mkj": "Spain"
+    },
+    "answer": "Spain national football team",
+    "qid_topic_entity": {
+      "Q29": "Spain"
+    }
+  },
+  {
+    "ID": "WebQTrn-2754_656966a314fe698823102343d85e2a58",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T03:58:28",
+    "machine_question": "who played as barney and that work as Television producer",
+    "question": "Which current TV producer played Barney?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.01f4yy)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.01f4yy ns:tv.tv_program.regular_cast ?y .\n?y ns:tv.regular_tv_appearance.actor ?x .\n?y ns:tv.regular_tv_appearance.character ns:m.0j_84dv .\n?x ns:people.person.profession ns:m.03gjzk . \n}",
+    "webqsp_ID": "WebQTrn-2754",
+    "webqsp_question": "who played as barney",
+    "topic_entity": {
+      "m.01f4yy": "Barney & Friends",
+      "m.0j_84dv": "Barney",
+      "m.03gjzk": "Television producer"
+    },
+    "answer": "David Joyner",
+    "qid_topic_entity": {
+      "Q213588": "Barney & Friends",
+      "Q578109": "Television producer"
+    }
+  },
+  {
+    "ID": "WebQTrn-1394_58fc62f12e18fa64619476efd4fbedb4",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T00:38:53",
+    "machine_question": "what country does turkey trade with and export to Greece",
+    "question": "What trade partner of Turkey also exports to Greece?",
+    "sparql": "#MANUAL SPARQL\nPREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x \nWHERE {\n\tFILTER (?x != ns:m.01znc_)\n\t{ \n\t  ns:m.01znc_ ns:location.statistical_region.places_exported_to ?y .\n\t  ?y ns:location.imports_and_exports.exported_to ?x . \n\t}\n\tUNION\n\t{\n\t  ns:m.01znc_ ns:location.statistical_region.places_imported_from ?y .\n\t  ?y ns:location.imports_and_exports.imported_from ?x . \n\t}?x ns:location.statistical_region.places_exported_to ?c .\n?c ns:location.imports_and_exports.exported_to ns:m.035qy . \n}",
+    "webqsp_ID": "WebQTrn-1394",
+    "webqsp_question": "what country does turkey trade with",
+    "topic_entity": {
+      "m.01znc_": "Turkey",
+      "m.035qy": "Greece"
+    },
+    "answer": "Albania",
+    "qid_topic_entity": {
+      "Q43": "Turkey",
+      "Q41": "Greece"
+    }
+  },
+  {
+    "ID": "WebQTrn-894_fe57689b82596f9ae1b7dd2272841edd",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-25T23:21:31",
+    "machine_question": "what inspired scott fitzgerald and who was Anglicanism",
+    "question": "Who identified with Anglicanism and inspired Scott Fitzgerald?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.02zjd)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.02zjd ns:influence.influence_node.influenced_by ?x .\n?x ns:people.person.religion ns:m.0n2g . \n}",
+    "webqsp_ID": "WebQTrn-894",
+    "webqsp_question": "what inspired scott fitzgerald",
+    "topic_entity": {
+      "m.02zjd": "F. Scott Fitzgerald",
+      "m.0n2g": "Anglicanism"
+    },
+    "answer": "T. S. Eliot",
+    "qid_topic_entity": {
+      "Q93354": "F. Scott Fitzgerald",
+      "Q6423963": "Anglicanism"
+    }
+  },
+  {
+    "ID": "WebQTrn-2570_bc48b5e8a9233e986458197061b7927f",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T03:22:59",
+    "machine_question": "who was the president of the united states during ww2 and is the public speaker which spoke about Attack on Pearl Harbor",
+    "question": "What US President during that WW2 that spoke about attack on Pearl Harbor?",
+    "sparql": "#MANUAL SPARQL\nPREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\n  ns:m.081pw ns:time.event.start_date ?start ;\n             ns:time.event.end_date ?end .\n  ?x ns:government.politician.government_positions_held  ?y .\n  ?y ns:government.government_position_held.office_position_or_title ns:m.060d2 ; # President of the United States\n     ns:government.government_position_held.from  ?from ;\n     ns:government.government_position_held.to  ?to .\n  FILTER (?from < ?end)\n  FILTER (?to > ?start)?x ns:event.public_speaker.speeches_or_presentations ?c .\n?c ns:event.speech_or_presentation.speech_topic ns:m.0gc1_ . \n}",
+    "webqsp_ID": "WebQTrn-2570",
+    "webqsp_question": "who was the president of the united states during ww2",
+    "topic_entity": {
+      "m.081pw": "World War II",
+      "m.060d2": "President of the United States",
+      "m.0gc1_": "Attack on Pearl Harbor"
+    },
+    "answer": "Franklin D. Roosevelt",
+    "qid_topic_entity": {
+      "Q362": "World War II",
+      "Q11696": "President of the United States",
+      "Q52418": "Attack on Pearl Harbor"
+    }
+  },
+  {
+    "ID": "WebQTest-1603_7ca9a8a41caa3634b454484965413fd3",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T11:01:39",
+    "machine_question": "what is the sacred text of daoism and is about Philosophy",
+    "question": "Which philosophical text is the sacred text of daoism?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.07gvx)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.07gvx ns:religion.religion.texts ?x .\n?x ns:book.written_work.subjects ns:m.037mh8 . \n}",
+    "webqsp_ID": "WebQTest-1603",
+    "webqsp_question": "what is the sacred text of daoism",
+    "topic_entity": {
+      "m.07gvx": "Taoism",
+      "m.037mh8": "Philosophy"
+    },
+    "answer": "Tao Te Ching",
+    "qid_topic_entity": {
+      "Q9598": "Taoism",
+      "Q5891": "Philosophy"
+    }
+  },
+  {
+    "ID": "WebQTrn-1001_9f0f81c7cf66ef6977300eb71deffb9f",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-25T23:37:46",
+    "machine_question": "what super bowls have the giants won and Buffalo Bills was the championship runner up",
+    "question": "Name the Super Bowl in which the New York Giants defeated the Buffalo Bills for the championship.?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.05gg4)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.05gg4 ns:sports.sports_team.championships ?x .\n?x ns:common.topic.notable_types ns:m.01xljv1 .\n?x ns:sports.sports_championship_event.runner_up ns:m.01c_d . \n}",
+    "webqsp_ID": "WebQTrn-1001",
+    "webqsp_question": "what super bowls have the giants won",
+    "topic_entity": {
+      "m.05gg4": "New York Giants",
+      "m.01xljv1": "Super bowl",
+      "m.01c_d": "Buffalo Bills"
+    },
+    "answer": "Super Bowl XXV",
+    "qid_topic_entity": {
+      "Q190618": "New York Giants",
+      "Q221626": "Buffalo Bills"
+    }
+  },
+  {
+    "ID": "WebQTrn-2218_7fde645929322023cada4f38c263bdcb",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T02:32:46",
+    "machine_question": "what is the subject of the film We Fight to Be Free 's hometown",
+    "question": "Where is the birthplace of the subject of the film \"We Fight to be Free\"?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:film.film_subject.films ns:m.0n_v7g3 . \n?c ns:people.person.place_of_birth ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-2218",
+    "webqsp_question": "what is george washington 's hometown",
+    "topic_entity": {
+      "m.0n_v7g3": "We Fight to Be Free"
+    },
+    "answer": "Westmoreland County",
+    "qid_topic_entity": {
+      "Q85814727": "We Fight to Be Free"
+    }
+  },
+  {
+    "ID": "WebQTrn-2286_a23d2f977b0719cd9eb684929c371ccb",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T02:43:16",
+    "machine_question": "where is the governmental jurisdiction that the government that has the position title Governor of Kentucky located",
+    "question": "Where would you find the governmental jurisdiction where the government has a position entitled Governor of Kentucky?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:government.governmental_jurisdiction.governing_officials ?k .\n?k ns:government.government_position_held.office_position_or_title ns:m.02p19pg . \n?c ns:location.location.containedby ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-2286",
+    "webqsp_question": "where is kentucky located",
+    "topic_entity": {
+      "m.02p19pg": "Governor of Kentucky"
+    },
+    "answer": "United States of America",
+    "qid_topic_entity": {
+      "Q4151335": "Governor of Kentucky"
+    }
+  },
+  {
+    "ID": "WebQTest-1736_8526fc2dec1ebbf627ccdf877d837b32",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T11:21:10",
+    "machine_question": "where is the place where West Germanic languages language is spoken located",
+    "question": "What continent does the country that uses West Germanic languages located in?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:location.country.official_language ns:m.0140qt . \n?c ns:location.location.containedby ?x .\n}\n",
+    "webqsp_ID": "WebQTest-1736",
+    "webqsp_question": "where is holy roman empire located",
+    "topic_entity": {
+      "m.0140qt": "West Germanic languages"
+    },
+    "answer": "Europe",
+    "qid_topic_entity": {
+      "Q26721": "West Germanic languages"
+    }
+  },
+  {
+    "ID": "WebQTrn-1294_c78732921e06412cc491a866e2dabf59",
+    "compositionality_type": "superlative",
+    "created": "2017-10-26T00:22:48",
+    "machine_question": "what is vito corleone real name and a celebritie that had a romantic relationship that ended earliest",
+    "question": "Which actor who portrayed Vito Corleone had a romantic relationship that ended earliest?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.05hp_9)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.05hp_9 ns:film.film_character.portrayed_in_films ?y .\n?y ns:film.performance.actor ?x .\n?x ns:celebrities.celebrity.sexual_relationships ?c .\n?c ns:celebrities.romantic_relationship.end_date ?num .\n}\nORDER BY ?num LIMIT 1",
+    "webqsp_ID": "WebQTrn-1294",
+    "webqsp_question": "what is vito corleone real name",
+    "topic_entity": {
+      "m.05hp_9": "Vito Corleone"
+    },
+    "answer": "Robert De Niro",
+    "qid_topic_entity": {
+      "Q745077": "Vito Corleone"
+    }
+  },
+  {
+    "ID": "WebQTest-61_32d1e3cb0fe98830969482138a79309f",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T06:49:54",
+    "machine_question": "what are the religions practiced in indonesia and the religon where the deities is \"Telangana Talli\"",
+    "question": "What religion, practiced in Indonesia, has the diety Telangana Talli?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.03ryn)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.03ryn ns:location.statistical_region.religions ?y .\n?y ns:location.religion_percentage.religion ?x .\n?x ns:religion.religion.deities ns:m.010rf0qr . \n}",
+    "webqsp_ID": "WebQTest-61",
+    "webqsp_question": "what are the religions practiced in indonesia",
+    "topic_entity": {
+      "m.03ryn": "Indonesia",
+      "m.010rf0qr": "Telangana Talli"
+    },
+    "answer": "Hinduism",
+    "qid_topic_entity": {
+      "Q252": "Indonesia"
+    }
+  },
+  {
+    "ID": "WebQTrn-837_45f00cf834ec70381e45de57b5b26219",
+    "compositionality_type": "composition",
+    "created": "2017-10-25T23:06:54",
+    "machine_question": "where did the artist which recorded Go All Night (extended mix) go to school",
+    "question": "What university did the artist famous for creating Go All Night attend?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:music.featured_artist.recordings ns:m.012xvk70 . \n?c ns:people.person.education ?y .\n?y ns:education.education.institution ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-837",
+    "webqsp_question": "where did jennifer hudson go to school",
+    "topic_entity": {
+      "m.012xvk70": "Go All Night (extended mix)"
+    },
+    "answer": "Dunbar Vocational High School",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-3170_88427e4cf8c94effb8217cddfd827261",
+    "compositionality_type": "composition",
+    "created": "2017-10-26T05:01:04",
+    "machine_question": "what does the author who published editions for Dreams from My Father have a degree in",
+    "question": "What does the author of Dreams from my Father have a degree in?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ?c)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\n?c ns:book.author.book_editions_published ns:m.028xzkj . \n?c ns:people.person.education ?y .\n?y ns:education.education.major_field_of_study ?x .\n}\n",
+    "webqsp_ID": "WebQTrn-3170",
+    "webqsp_question": "what does obama have a degree in",
+    "topic_entity": {
+      "m.028xzkj": "Dreams from My Father"
+    },
+    "answer": "Political Science",
+    "qid_topic_entity": {}
+  },
+  {
+    "ID": "WebQTrn-3543_bbb0c8aa3a2941db5bf85e7557241fda",
+    "compositionality_type": "conjunction",
+    "created": "2017-10-26T06:06:32",
+    "machine_question": "what countries does japan export to and the ISO numeric of the country is 736",
+    "question": "Find the country with the ISO number of 736 that that imports from Japan, what is the name of the country?",
+    "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.03_3d)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.03_3d ns:location.statistical_region.places_exported_to ?y .\n?y ns:location.imports_and_exports.exported_to ?x .\n?x ns:location.country.iso_numeric \"736\" . \n}",
+    "webqsp_ID": "WebQTrn-3543",
+    "webqsp_question": "what countries does japan export to",
+    "topic_entity": {
+      "m.03_3d": "Japan"
+    },
+    "answer": "Sudan",
+    "qid_topic_entity": {
+      "Q17": "Japan"
+    }
+  }
+]
